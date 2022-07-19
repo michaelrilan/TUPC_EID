@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>reset.png</file>
+    <file>crop.png</file>
+    <file>delete_icon'.png</file>
+    <file>makedp.png</file>
+    <file>next_icon.png</file>
+    <file>prev_icon.png</file>
+  </qresource>
+</RCC>

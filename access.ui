@@ -1,0 +1,2886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>930</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Welcome to  Employee Information Database</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/iconss/header.png</normaloff>:/iconss/header.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#pushmenuin{
+background-color: rgb(255, 255, 255,40);
+}
+
+#pushmenuin:hover{
+background-color: rgb(255, 255, 255);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>931</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 255);}
+#pushmenuin{
+background-color: rgb(170, 0, 0);
+	font: 87 10pt &quot;Arial Black&quot;;
+}
+
+#pushmenuin:hover{
+background-color: rgb(255, 85, 0);
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>10</y>
+       <width>501</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 87 18pt &quot;Arial Black&quot;;</string>
+     </property>
+     <property name="text">
+      <string>EMPLOYEE INFORMATION DATABASE</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushLogout">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>30</y>
+       <width>61</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image:url(:/iconss/logout_icon.png)
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_30">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>70</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>LOGOUT</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>50</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <widget class="QCommandLinkButton" name="pushmenuin">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Main Menu</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/newPrefix/hamburgericon.png</normalon>
+        <disabledoff>:/newPrefix/hamburgericon.png</disabledoff>
+        <disabledon>:/newPrefix/hamburgericon.png</disabledon>
+        <activeoff>:/newPrefix/hamburgericon.png</activeoff>
+        <activeon>:/newPrefix/hamburgericon.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <zorder>label_4</zorder>
+    <zorder>label_30</zorder>
+    <zorder>pushLogout</zorder>
+    <zorder>frame_5</zorder>
+   </widget>
+   <widget class="QFrame" name="frameList">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>90</y>
+      <width>931</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{background-color: rgb(250,250,250);
+}
+
+#textData{background-color: rgba(200, 200, 200, 215);}
+#textData:hover{
+background-color: rgba(255, 255, 255, 240);
+}
+#listE{
+background-color: rgb(0, 0, 0,180);
+
+color:white;
+}
+
+#listE:hover{
+background-color: rgb(40, 40, 40);
+color:white;
+}
+
+#pushPrint{
+background-color: rgb(170, 0, 0);
+border-radius:5px;
+border-bottom:3px solid rgb(104, 0, 0);
+border-right:3px solid  rgb(104, 0, 0);
+transition: all 1s;
+color:white;
+}
+#pushPrint:hover{
+background-color: rgb(255, 85, 0);
+border-bottom:3px solid rgb(255, 85, 0);
+border-right:3px solid rgb(130, 43, 0);
+}
+
+
+#pushModify{
+background-color: rgb(44, 44, 44);
+border-radius:5px;
+border-bottom:2px solid rgb(0, 0, 0);
+border-right:2px solid  rgb(0, 0, 0);
+transition: all 1s;
+color:white;
+}
+#pushModify:hover{
+background-color: rgb(0, 0, 0);
+border-bottom:2px solid gray;
+border-right:2px solid gray;
+}
+#lineSearch{
+background:transparent;
+border-bottom:1px solid  rgb(0,0,0,170);
+border-left:1px solid  rgb(0,0,0,170);
+border-top:1px solid  rgb(0,0,0,170);
+border-right:1px solid  rgb(0,0,0,170);
+border-radius:5px;
+font: 9pt &quot;Century Gothic&quot;;
+
+}
+
+#pushPrint_2{
+background-color: rgb(170, 0, 0);
+border-radius:5px;
+border-bottom:3px solid rgb(104, 0, 0);
+border-right:3px solid  rgb(104, 0, 0);
+transition: all 1s;
+color:white;
+}
+#pushPrint_2:hover{
+background-color: rgb(255, 85, 0);
+border-bottom:3px solid rgb(255, 85, 0);
+border-right:3px solid rgb(130, 43, 0);
+}
+#pic{
+border-bottom:1px solid  rgb(0,0,0,170);
+border-left:1px solid  rgb(0,0,0,170);
+border-top:1px solid  rgb(0,0,0,170);
+border-right:1px solid  rgb(0,0,0,170);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <widget class="QPushButton" name="pushPrint">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>440</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>PRINT</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineSearch">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>10</y>
+       <width>591</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Type the Employee's Name</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textData">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>220</y>
+       <width>311</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushModify">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>440</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>MODIFY</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboList">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>50</y>
+       <width>151</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(44, 44, 44);</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>ALL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TEACHING PERSONNEL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>NON-TEACHING PERSONNEL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PART TIME</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CONTRACT OF SERVICE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SEPARATED</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QListWidget" name="listE">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>100</y>
+       <width>291</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="180">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="NoBrush">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="180">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="180">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="NoBrush">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="180">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="180">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="NoBrush">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="180">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Impact&quot;;</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>New Item</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>New Item</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>New Item</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>New Item</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>New Item</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>New Item</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>dsfsdfsdfsfsdfdsf</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_31">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>50</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Arial Black&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Employee Type:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushPrint_2">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>440</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>PRINT LIST OF PERSONELS</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pic">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>60</y>
+       <width>171</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_33">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>10</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Arial Black&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Filter Search:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>50</y>
+       <width>471</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/iconss/header.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>80</y>
+       <width>201</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>*click the employee's name to view</string>
+     </property>
+    </widget>
+    <zorder>label_11</zorder>
+    <zorder>label_33</zorder>
+    <zorder>pushPrint</zorder>
+    <zorder>lineSearch</zorder>
+    <zorder>textData</zorder>
+    <zorder>pushModify</zorder>
+    <zorder>comboList</zorder>
+    <zorder>listE</zorder>
+    <zorder>label_31</zorder>
+    <zorder>pushPrint_2</zorder>
+    <zorder>pic</zorder>
+    <zorder>label_12</zorder>
+   </widget>
+   <widget class="QFrame" name="frameleave">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>10</y>
+      <width>251</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+background-color:rgb(250,250,250);
+}
+#pushmenuin2{
+background-color: rgb(255, 255, 255,40);
+}
+
+#pushmenuin2:hover{
+background-color: rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frameACC">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>260</y>
+      <width>261</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+background-color:rgb(250,250,250);
+}
+#pushmenuin3{
+background-color: rgb(255, 255, 255,40);
+}
+
+#pushmenuin3:hover{
+background-color: rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <widget class="QFrame" name="frame_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>90</y>
+       <width>511</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{background-color: rgb(0, 0, 0,160);
+border-radius:12px;
+
+}
+#label_74{
+background:transparent;
+}
+
+QLineEdit{
+background:transparent;
+border-bottom:2px solid  white;
+border-radius:5px;
+font-family:century gothic;
+color:white;
+}
+QLineEdit:hover{
+background-color: rgb(48, 48, 48);
+}
+QPushButton{
+background-color: rgb(44, 44, 44);
+color: rgb(255, 255, 255);
+font: 9pt &quot;MS Shell Dlg 2&quot;;
+border-radius:15px;
+display: inline-block;
+text-decoration: none;
+border-bottom:3px solid  rgb(0,0,0);
+border-right:3px solid  rgb(0,0,0);
+}
+QPushButton:hover{
+background-color: rgb(0, 0, 0,230);
+
+}
+#lineEdit_8{
+font-size:12.5pt;
+
+}
+#lineEdit_9{
+font-size:12.5pt;
+
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_74">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>131</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/iconss/account_settings.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>242</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Change Account's Verification Code</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>200</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Change Account's Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Change Account Username</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>120</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Account Information</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frameinfo">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>241</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background:transparent;
+color: white;
+font-family:century-gothic;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_78">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>New Username:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_79">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Date Registered</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_8">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>50</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_9">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frameuser">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>241</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background:transparent;
+color: white;
+font-family:century-gothic;
+}
+#confirmuser{
+background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 255);
+font: 9pt &quot;MS Shell Dlg 2&quot;;
+border-radius:15px;
+border-bottom:3px solid rgb(104, 0, 0);
+border-right:3px solid  rgb(104, 0, 0);
+transition: all 1s;
+}
+#confirmuser:hover{
+background-color: rgb(255, 85, 0);
+border-bottom:3px solid  rgb(130, 43, 0);
+border-right:3px solid rgb(130, 43, 0);
+}
+
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_81">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>New Username:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_82">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Confirm Validation Code:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_83">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Confirm Password:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="confirmuser">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>210</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Confirm</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_11">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>50</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_12">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_13">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>170</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="framepass">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>241</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background:transparent;
+color: white;
+font-family:century-gothic;
+}
+#confirmpass{
+background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 255);
+font: 9pt &quot;MS Shell Dlg 2&quot;;
+border-radius:15px;
+border-bottom:3px solid rgb(104, 0, 0);
+border-right:3px solid  rgb(104, 0, 0);
+transition: all 1s;
+}
+#confirmpass:hover{
+background-color: rgb(255, 85, 0);
+border-bottom:3px solid  rgb(130, 43, 0);
+border-right:3px solid rgb(130, 43, 0);
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_84">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Current Password:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_85">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>NewPassword:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_86">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Confirm Password:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="confirmpass">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>210</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Confirm</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_14">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>50</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_15">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_16">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>170</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="framepass_2">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>241</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background:transparent;
+color: white;
+font-family:century-gothic;
+}
+#confirmpass_3{
+background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 255);
+font: 9pt &quot;MS Shell Dlg 2&quot;;
+border-radius:15px;
+border-bottom:3px solid rgb(104, 0, 0);
+border-right:3px solid  rgb(104, 0, 0);
+transition: all 1s;
+}
+#confirmpass_3:hover{
+background-color: rgb(255, 85, 0);
+border-bottom:3px solid  rgb(130, 43, 0);
+border-right:3px solid rgb(130, 43, 0);
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_90">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Current Verification Code:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_91">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>New Verification Code:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_92">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Confirm Verification Code:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="confirmpass_3">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>210</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Confirm</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_20">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>50</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_21">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_22">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>170</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </widget>
+     <zorder>label_74</zorder>
+     <zorder>pushButton_9</zorder>
+     <zorder>pushButton_8</zorder>
+     <zorder>pushButton</zorder>
+     <zorder>pushButton_10</zorder>
+     <zorder>framepass_2</zorder>
+     <zorder>frameinfo</zorder>
+     <zorder>framepass</zorder>
+     <zorder>frameuser</zorder>
+    </widget>
+    <widget class="QLabel" name="label_75">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>20</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 15pt &quot;Arial Black&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Account Settings</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="framenotif">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>30</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#framenotif{
+background-color:rgb(250,250,250);
+}
+
+#pushupdatenotif{
+background-color: rgb(170, 0, 0);
+border-radius:5px;
+border-bottom:3px solid rgb(104, 0, 0);
+border-right:3px solid  rgb(104, 0, 0);
+transition: all 1s;
+color:white;
+}
+#pushupdatenotif:hover{
+background-color: rgb(255, 85, 0);
+border-bottom:3px solid rgb(130, 43, 0);
+border-right:3px solid rgb(130, 43, 0);
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <widget class="QLabel" name="label_32">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>181</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 13pt &quot;Arial Black&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Notification Sheet:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushupdatenotif">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>420</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>UPDATE</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listnotif">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>401</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Arial Black&quot;;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>40</y>
+       <width>471</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/iconss/header.png);
+opacity:0.5;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textviewnotif">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>70</y>
+       <width>451</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(200, 200, 200,115);
+</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt;&quot;&gt;Dear &lt;/span&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600; color:#0055ff;&quot;&gt;**officer name &lt;/span&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600; color:#000000;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600;&quot;&gt;	We would like to inform you that our system  detected an employee to be promote on &lt;/span&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600; color:#0055ff;&quot;&gt;DATE&lt;/span&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600;&quot;&gt;.Please click the update button to update the date of last promotion of the employee. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Arial Black'; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600; color:#0055ff;&quot;&gt;Employee Information:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Arial Black'; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600;&quot;&gt;Lastname: &lt;/span&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600; color:#0055ff;&quot;&gt;RILAN&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600;&quot;&gt;Firstname: &lt;/span&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600; color:#0055ff;&quot;&gt;MICHAEL ANGELO&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600;&quot;&gt;Middlename: &lt;/span&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600; color:#0055ff;&quot;&gt;SUAREZ&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600;&quot;&gt;Date of Last Promotion(yyyy-mm-dd): &lt;/span&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600; color:#0055ff;&quot;&gt;2017-11-7&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600;&quot;&gt;Date of Next Promotion(yyyy-mm-dd): &lt;/span&gt;&lt;span style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:600; color:#0055ff;&quot;&gt;2020-11-7(3 days from now)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_3">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>30</y>
+       <width>431</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255,110);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>191</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>**Click the Notification Message to view</string>
+     </property>
+    </widget>
+    <zorder>label_13</zorder>
+    <zorder>frame_3</zorder>
+    <zorder>label_32</zorder>
+    <zorder>pushupdatenotif</zorder>
+    <zorder>listnotif</zorder>
+    <zorder>textviewnotif</zorder>
+    <zorder>label_7</zorder>
+   </widget>
+   <widget class="QFrame" name="footer">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>570</y>
+      <width>931</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(163, 163, 163);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Developed by: </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Rilan, Michael Angelo S.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Naz,Romwell M.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>40</y>
+       <width>251</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>BET-CpET Non-STEM-2D Project SY.2020-2021</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="menu">
+    <property name="geometry">
+     <rect>
+      <x>-190</x>
+      <y>90</y>
+      <width>191</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{background-color: rgb(0, 0, 0,240);
+color: rgb(255, 255, 255);
+}
+QPushButton{
+background-color: rgb(44, 44, 44);
+color: rgb(255, 255, 255);
+font: 9pt &quot;MS Shell Dlg 2&quot;;
+border-radius:3px;
+display: inline-block;
+padding: 0.5em 1em;
+text-decoration: none;
+border-bottom:3px solid  rgb(0,0,0);
+border-right:3px solid  rgb(0,0,0);
+}
+QPushButton:hover{
+background:black;
+
+}
+#label_31{
+background:transparent;
+	font: 16pt &quot;Impact&quot;;
+}
+QLabel{
+background:transparent;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="commandLinkButton_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>60</y>
+       <width>191</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Home</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="commandLinkButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>140</y>
+       <width>191</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>ADD EMPLOYEE</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushACC">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>220</y>
+       <width>191</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>ACCOUNT SETTING</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushACC_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>300</y>
+       <width>191</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>NOTIFICATION</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushmenuout">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>0</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: transparent;
+border-radius:20px;
+image: url(:/newPrefix/closemenu.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>14</width>
+       <height>14</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frameAdd_2">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>140</y>
+      <width>101</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{background-color: rgb(250,250,250);
+font: 10pt &quot;Impact&quot;;
+color:black;
+
+}
+#frame_4{
+
+background-color: rgb(0, 0, 0,32);
+color:white;
+border-radius:20px;
+}
+QLabel{
+background:transparent;
+}
+#frame_8{
+background:transparent;
+border:1px solid black;
+border-radius:10px;
+
+}
+#groupBox_7{
+background:transparent;
+border:1px solid black;
+border-radius:8px
+}
+QLineEdit{
+background:transparent;
+border-bottom:2px solid  rgb(0,0,0,170);
+border-radius:5px;
+font-size:9pt;
+font-family:century gothic;
+}
+QLineEdit:hover{
+background-color: rgb(186, 186, 186);
+}
+#comboBox_3{
+font-family:century gothic;
+}
+#pushmenuin1{
+background-color: rgb(255, 255, 255,40);
+}
+
+#pushmenuin1:hover{
+background-color: rgb(255, 255, 255);
+}
+#pushbrowsepic{
+background-color: rgb(170, 0, 0);
+border-radius:5px;
+border-bottom:3px solid rgb(104, 0, 0);
+border-right:3px solid  rgb(104, 0, 0);
+transition: all 1s;
+color:white;
+}
+#pushbrowsepic:hover{
+background-color: rgb(255, 85, 0);
+border-bottom:3px solid rgb(130, 43, 0);
+border-right:3px solid rgb(130, 43, 0);
+}
+#pushtakephoto{
+background-color: rgb(170, 0, 0);
+border-radius:5px;
+border-bottom:3px solid rgb(104, 0, 0);
+border-right:3px solid  rgb(104, 0, 0);
+transition: all 1s;
+color:white;
+}
+#pushtakephoto:hover{
+background-color: rgb(255, 85, 0);
+border-bottom:3px solid rgb(130, 43, 0);
+border-right:3px solid rgb(130, 43, 0);
+}
+#pushAdd{
+background-color: rgb(170, 0, 0);
+border-radius:5px;
+border-bottom:3px solid rgb(104, 0, 0);
+border-right:3px solid  rgb(104, 0, 0);
+transition: all 1s;
+color:white;
+}
+#pushAdd:hover{
+background-color: rgb(255, 85, 0);
+border-bottom:3px solid rgb(130, 43, 0);
+border-right:3px solid rgb(130, 43, 0);
+}
+#textEdit{
+border:1px solid black;
+border-radius:8px;
+font-size:9pt;
+font-family:century gothic;
+
+}
+#label_2{
+font-size:8pt;
+font-family:century gothic,bold;
+
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <widget class="QFrame" name="frame_4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>841</width>
+       <height>451</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#frame_4{
+
+background-color: rgb(0, 0, 0,32);
+color:white;
+border-radius:20px;
+}</string>
+     </property>
+     <widget class="QLabel" name="label_53">
+      <property name="geometry">
+       <rect>
+        <x>31</x>
+        <y>51</y>
+        <width>80</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>First name*:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_54">
+      <property name="geometry">
+       <rect>
+        <x>31</x>
+        <y>78</y>
+        <width>87</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Middle name:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_55">
+      <property name="geometry">
+       <rect>
+        <x>31</x>
+        <y>105</y>
+        <width>79</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Last name*:</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>190</y>
+        <width>181</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;Impact&quot;;</string>
+      </property>
+      <property name="title">
+       <string>Gender*</string>
+      </property>
+      <widget class="QRadioButton" name="radioMale_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Male</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioFemale_3">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>20</y>
+         <width>61</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Female</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_57">
+      <property name="geometry">
+       <rect>
+        <x>21</x>
+        <y>241</y>
+        <width>88</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Designation*:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_58">
+      <property name="geometry">
+       <rect>
+        <x>21</x>
+        <y>270</y>
+        <width>96</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Salary Grade*:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_59">
+      <property name="geometry">
+       <rect>
+        <x>21</x>
+        <y>299</y>
+        <width>112</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Step Increment*:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_60">
+      <property name="geometry">
+       <rect>
+        <x>331</x>
+        <y>41</y>
+        <width>162</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Date of Last Promotion*:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_61">
+      <property name="geometry">
+       <rect>
+        <x>21</x>
+        <y>328</y>
+        <width>138</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Employment Status*:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_3">
+      <property name="geometry">
+       <rect>
+        <x>139</x>
+        <y>351</y>
+        <width>171</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(44, 44, 44);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>.....</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TEACHING PERSONNEL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NON-TEACHING PERSONNEL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>PART TIME</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CONTRACT OF SERVICE</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SEPARATED</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="lineFirstname_3">
+      <property name="geometry">
+       <rect>
+        <x>124</x>
+        <y>51</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>60</number>
+      </property>
+      <property name="placeholderText">
+       <string>Firstname(i.e. RICARDO)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineMid_3">
+      <property name="geometry">
+       <rect>
+        <x>124</x>
+        <y>78</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>30</number>
+      </property>
+      <property name="placeholderText">
+       <string>leave blank if No Middle name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineLastname_3">
+      <property name="geometry">
+       <rect>
+        <x>124</x>
+        <y>105</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>30</number>
+      </property>
+      <property name="placeholderText">
+       <string>Last name (i.e. DALISAY)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineDesignation_3">
+      <property name="geometry">
+       <rect>
+        <x>139</x>
+        <y>241</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>50</number>
+      </property>
+      <property name="placeholderText">
+       <string>Designation(letters only)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineSalaryg_3">
+      <property name="geometry">
+       <rect>
+        <x>139</x>
+        <y>270</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
+      </property>
+      <property name="placeholderText">
+       <string>Salary Grade(numbers only)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineStepincre_3">
+      <property name="geometry">
+       <rect>
+        <x>139</x>
+        <y>299</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
+      </property>
+      <property name="placeholderText">
+       <string>Step Increment(numbers only)</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_8">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>200</y>
+        <width>351</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_66">
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+         </property>
+         <property name="text">
+          <string>PHILHEALTH*:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineTin_3">
+         <property name="maxLength">
+          <number>9</number>
+         </property>
+         <property name="placeholderText">
+          <string>Enter 9 digits only</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_63">
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+         </property>
+         <property name="text">
+          <string>GSIS*:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_65">
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+         </property>
+         <property name="text">
+          <string>PAGIBIG*:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_64">
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+         </property>
+         <property name="text">
+          <string>SSS*:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="linePhil_3">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>12</number>
+         </property>
+         <property name="placeholderText">
+          <string>Enter 12 digits only</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QLabel" name="label_67">
+         <property name="styleSheet">
+          <string notr="true">font: 11pt &quot;Arial Black&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Employee's Benefit Informations</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_62">
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+         </property>
+         <property name="text">
+          <string>TIN*:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="linePagibig_3">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>12</number>
+         </property>
+         <property name="placeholderText">
+          <string>Enter 12 digits only</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="lineSss_3">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>10</number>
+         </property>
+         <property name="placeholderText">
+          <string>Enter 10 digits only</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineGsis_3">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>11</number>
+         </property>
+         <property name="placeholderText">
+          <string>Enter 11 digits only</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_68">
+      <property name="geometry">
+       <rect>
+        <x>331</x>
+        <y>149</y>
+        <width>48</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Email*:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEmail_3">
+      <property name="geometry">
+       <rect>
+        <x>499</x>
+        <y>149</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>200</number>
+      </property>
+      <property name="placeholderText">
+       <string>email(i.e. abc123@....)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_69">
+      <property name="geometry">
+       <rect>
+        <x>331</x>
+        <y>122</y>
+        <width>107</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Phone Number*:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="linePhone_7">
+      <property name="geometry">
+       <rect>
+        <x>499</x>
+        <y>122</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>11</number>
+      </property>
+      <property name="placeholderText">
+       <string>phone number(i.e.09............)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushAdd">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>400</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_70">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>291</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Employee's Personal Information</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_71">
+      <property name="geometry">
+       <rect>
+        <x>331</x>
+        <y>95</y>
+        <width>49</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>ID NO*:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="linePhone_8">
+      <property name="geometry">
+       <rect>
+        <x>499</x>
+        <y>95</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
+      </property>
+      <property name="placeholderText">
+       <string>Employee ID(numbers only)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="linePhone_9">
+      <property name="geometry">
+       <rect>
+        <x>124</x>
+        <y>132</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
+      </property>
+      <property name="placeholderText">
+       <string>numbers only</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_72">
+      <property name="geometry">
+       <rect>
+        <x>31</x>
+        <y>132</y>
+        <width>65</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Item NO*:</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit">
+      <property name="geometry">
+       <rect>
+        <x>499</x>
+        <y>41</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;Century Gothic&quot;;
+font-color: black;</string>
+      </property>
+      <property name="maximumDateTime">
+       <datetime>
+        <hour>23</hour>
+        <minute>59</minute>
+        <second>59</second>
+        <year>2099</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+      <property name="minimumDateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1901</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+      <property name="displayFormat">
+       <string>yyyy/MM/dd</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushbrowsepic">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>110</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Browse </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_73">
+      <property name="geometry">
+       <rect>
+        <x>331</x>
+        <y>68</y>
+        <width>140</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>First Day of Service*:</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>499</x>
+        <y>68</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;Century Gothic&quot;;
+font-color:black;</string>
+      </property>
+      <property name="maximumDateTime">
+       <datetime>
+        <hour>23</hour>
+        <minute>59</minute>
+        <second>59</second>
+        <year>2099</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+      <property name="minimumDateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1901</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+      <property name="displayFormat">
+       <string>yyyy/MM/dd</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_77">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>400</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;Impact&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Remarks:</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>380</y>
+        <width>231</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>type the remarks here</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>10</y>
+        <width>371</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>note: all fields  that has  asterisk '*' should not leave empty</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>0</y>
+        <width>1</width>
+        <height>461</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: black;
+</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>10</y>
+        <width>111</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>            1X1 Picture*</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>180</y>
+        <width>521</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>124</x>
+        <y>159</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;Century Gothic&quot;;
+font-color:black;</string>
+      </property>
+      <property name="maximumDateTime">
+       <datetime>
+        <hour>23</hour>
+        <minute>59</minute>
+        <second>59</second>
+        <year>2099</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+      <property name="minimumDateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1901</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+      <property name="displayFormat">
+       <string>yyyy/MM/dd</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_56">
+      <property name="geometry">
+       <rect>
+        <x>31</x>
+        <y>159</y>
+        <width>66</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Arial Black&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Birthday*:</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <zorder>frameList</zorder>
+   <zorder>footer</zorder>
+   <zorder>frame</zorder>
+   <zorder>frameleave</zorder>
+   <zorder>frameACC</zorder>
+   <zorder>frameAdd_2</zorder>
+   <zorder>framenotif</zorder>
+   <zorder>menu</zorder>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineFirstname_3</tabstop>
+  <tabstop>lineMid_3</tabstop>
+  <tabstop>lineLastname_3</tabstop>
+  <tabstop>linePhone_9</tabstop>
+  <tabstop>dateEdit_3</tabstop>
+  <tabstop>lineDesignation_3</tabstop>
+  <tabstop>lineSalaryg_3</tabstop>
+  <tabstop>lineStepincre_3</tabstop>
+  <tabstop>dateEdit</tabstop>
+  <tabstop>linePhone_8</tabstop>
+  <tabstop>linePhone_7</tabstop>
+  <tabstop>lineEmail_3</tabstop>
+  <tabstop>lineTin_3</tabstop>
+  <tabstop>lineGsis_3</tabstop>
+  <tabstop>lineSss_3</tabstop>
+  <tabstop>linePagibig_3</tabstop>
+  <tabstop>linePhil_3</tabstop>
+  <tabstop>pushAdd</tabstop>
+  <tabstop>pushLogout</tabstop>
+  <tabstop>listE</tabstop>
+  <tabstop>comboBox_3</tabstop>
+  <tabstop>comboList</tabstop>
+  <tabstop>pushPrint</tabstop>
+  <tabstop>textData</tabstop>
+  <tabstop>radioFemale_3</tabstop>
+  <tabstop>radioMale_3</tabstop>
+  <tabstop>pushButton_8</tabstop>
+  <tabstop>pushPrint_2</tabstop>
+  <tabstop>lineSearch</tabstop>
+  <tabstop>pushButton_9</tabstop>
+  <tabstop>pushModify</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_10</tabstop>
+  <tabstop>lineEdit_8</tabstop>
+  <tabstop>lineEdit_9</tabstop>
+  <tabstop>confirmuser</tabstop>
+  <tabstop>lineEdit_11</tabstop>
+  <tabstop>lineEdit_12</tabstop>
+  <tabstop>lineEdit_13</tabstop>
+  <tabstop>confirmpass</tabstop>
+  <tabstop>lineEdit_14</tabstop>
+  <tabstop>lineEdit_15</tabstop>
+  <tabstop>lineEdit_16</tabstop>
+  <tabstop>confirmpass_3</tabstop>
+  <tabstop>lineEdit_20</tabstop>
+  <tabstop>lineEdit_21</tabstop>
+  <tabstop>lineEdit_22</tabstop>
+  <tabstop>commandLinkButton_4</tabstop>
+  <tabstop>commandLinkButton</tabstop>
+  <tabstop>pushACC</tabstop>
+  <tabstop>pushmenuout</tabstop>
+  <tabstop>pushACC_2</tabstop>
+ </tabstops>
+ <resources>
+  <include location="icons.qrc"/>
+  <include location="iconsnavigation.qrc"/>
+ </resources>
+ <connections/>
+</ui>

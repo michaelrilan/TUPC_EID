@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="iconss">
+    <file>burgermenu.png</file>
+    <file>closemenu.png</file>
+    <file>hamburgericon.png</file>
+    <file>account_settings.png</file>
+    <file>header.png</file>
+    <file>add_employee.png</file>
+    <file>add_employee.jpg</file>
+    <file>list_of_employee.png</file>
+    <file>logout_icon.png</file>
+    <file>menu_icon.png</file>
+    <file>login_icon.png</file>
+    <file>hr_icon.jpg</file>
+    <file>register_icon.png</file>
+  </qresource>
+</RCC>
